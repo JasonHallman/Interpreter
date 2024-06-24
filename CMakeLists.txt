@@ -18,4 +18,3 @@ add_executable(interpreter
 
 # Add the tests
 add_subdirectory(tests)
-

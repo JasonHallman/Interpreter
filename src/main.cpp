@@ -1,6 +1,8 @@
+#include "token.hpp"
 #include <iostream>
 
 int main() {
-	std::cout << "Hi\n";
+    Token *t = new Token(TokenType::LET, "let");
+    std::cout << "HI!\n";
 }
 
