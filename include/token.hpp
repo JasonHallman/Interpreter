@@ -29,5 +29,6 @@ public:
     TokenType type;
     std::string literal;
 
-    Token(TokenType type, const std::string& literal) : type(type), literal(literal) {}
+    Token(TokenType type, const std::string& literal);
+    void print() const;
 };
