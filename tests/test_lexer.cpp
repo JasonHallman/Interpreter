@@ -7,7 +7,7 @@ TEST_CASE("Lexer test", "[lexer]") {
     SECTION("Default") {
         std::string input = "=+(){},;";
 
-        Token test_tokens[] = {
+        std::vector<Token> test_tokens = {
             Token(TokenType::ASSIGN, "="),
             Token(TokenType::PLUS, "+"),
             Token(TokenType::LPAREN, "("),
@@ -21,7 +21,7 @@ TEST_CASE("Lexer test", "[lexer]") {
 
         Lexer *l = new Lexer(input);
 
-        for (int i = 0; i < input.size(); i++) {
+        for (int i = 0; i < test_tokens.size(); i++) {
             Token t = l->nextToken();
 
             REQUIRE(t.type == test_tokens[i].type);
@@ -41,9 +41,9 @@ TEST_CASE("More", "[lexer]") {
             }; \
             \
             let result = add(five, ten); \
-        "
+        ";
 
-        Token test_tokens[] = {
+        std::vector<Token> test_tokens = {
             Token(TokenType::LET, "let"),
             Token(TokenType::IDENT, "five"),
             Token(TokenType::ASSIGN, "="),
@@ -85,7 +85,7 @@ TEST_CASE("More", "[lexer]") {
 
         Lexer *l = new Lexer(input);
 
-        for (int i = 0; i < input.size(); i++) {
+        for (int i = 0; i < test_tokens.size(); i++) {
             Token t = l->nextToken();
 
             REQUIRE(t.type == test_tokens[i].type);
