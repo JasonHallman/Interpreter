@@ -11,6 +11,11 @@ public:
     Lexer(std::string& input) : input(input) {}
 
     Token nextToken();
-    TokenType getTokenType();
-    char getCurrentChar();
+    void skipWhitespace();
+    Token getToken();
+    char getChar(int offset = 0);
+    std::string getWord();
+    std::string getNumber();
+    Token getWordToken(const std::string);
 };
+
