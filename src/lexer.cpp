@@ -15,10 +15,24 @@ Token Lexer::nextToken() {
     TokenType tt;
 
     switch (cur_char) {
-        case '=': tt = TokenType::ASSIGN; break;
+        case '=':
+            if (this->getChar(1) == '=') {
+                tt = TokenType::EQ;
+                this-pos++;
+            } else {
+                tt = TokenType::ASSIGN;
+            } 
+            break;
         case '+': tt = TokenType::PLUS; break;
         case '-': tt = TokenType::MINUS; break;
-        case '!': tt = TokenType::BANG; break;
+        case '!':
+            if (this->getChar(1) == '=') {
+                tt = TokenType::NOT_EQ;
+                this->pos++;
+            } else {
+                tt = TokenType::BANG;
+            }
+            break;
         case '*': tt = TokenType::ASTERISK; break;
         case '/': tt = TokenType::SLASH; break;
         case '>': tt = TokenType::GT; break;
