@@ -28,6 +28,11 @@ void Token::print() const {
         case TokenType::RBRACE: tt = "TokenType::RBRACE"; break;
         case TokenType::FUNCTION: tt = "TokenType::FUNCTION"; break;
         case TokenType::LET: tt = "TokenType::LET"; break;
+        case TokenType::TRUE: tt = "TokenType::TRUE"; break;
+        case TokenType::FALSE: tt = "TokenType::FALSE"; break;
+        case TokenType::IF: tt = "TokenType::IF"; break;
+        case TokenType::ELSE: tt = "TokenType::ELSE"; break;
+        case TokenType::RETURN: tt = "TokenType::RETURN"; break;
         default: tt = "UNKNOWN";
     }
     std::cout << "{" << tt << ", " << this->literal << "}\n";

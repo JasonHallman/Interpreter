@@ -104,6 +104,11 @@ Token Lexer::getWordToken(const std::string word) {
     std::map<std::string, TokenType> keyword_map = {
         {"let", TokenType::LET},
         {"fn", TokenType::FUNCTION},
+        {"true", TokenType::TRUE},
+        {"false", TokenType::FALSE},
+        {"if", TokenType::IF},
+        {"else", TokenType::ELSE},
+        {"return", TokenType::RETURN},
     };
 
     if (keyword_map.contains(word)) {
