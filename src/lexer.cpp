@@ -18,7 +18,7 @@ Token Lexer::nextToken() {
         case '=':
             if (this->getChar(1) == '=') {
                 tt = TokenType::EQ;
-                this-pos++;
+                this->pos++;
             } else {
                 tt = TokenType::ASSIGN;
             } 
