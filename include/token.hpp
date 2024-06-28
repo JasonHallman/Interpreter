@@ -12,6 +12,12 @@ enum class TokenType {
 
     ASSIGN,
     PLUS,
+    MINUS,
+    BANG,
+    ASTERISK,
+    SLASH,
+    LT,
+    GT,
 
     COMMA,
     SEMICOLON,

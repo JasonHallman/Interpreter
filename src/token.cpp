@@ -14,6 +14,12 @@ void Token::print() const {
         case TokenType::INT: tt = "TokenType::INT"; break;
         case TokenType::ASSIGN: tt = "TokenType::ASSIGN"; break;
         case TokenType::PLUS: tt = "TokenType::PLUS"; break;
+        case TokenType::MINUS: tt = "TokenType::MINUS"; break;
+        case TokenType::BANG: tt = "TokenType::BANG"; break;
+        case TokenType::ASTERISK: tt = "TokenType::ASTERISK"; break;
+        case TokenType::SLASH: tt = "TokenType::SLASH"; break;
+        case TokenType::LT: tt = "TokenType::LT"; break;
+        case TokenType::GT: tt = "TokenType::GT"; break;
         case TokenType::COMMA: tt = "TokenType::COMMA"; break;
         case TokenType::SEMICOLON: tt = "TokenType::SEMICOLON"; break;
         case TokenType::LPAREN: tt = "TokenType::LPAREN"; break;

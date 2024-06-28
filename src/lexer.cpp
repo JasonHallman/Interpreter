@@ -17,6 +17,12 @@ Token Lexer::nextToken() {
     switch (cur_char) {
         case '=': tt = TokenType::ASSIGN; break;
         case '+': tt = TokenType::PLUS; break;
+        case '-': tt = TokenType::MINUS; break;
+        case '!': tt = TokenType::BANG; break;
+        case '*': tt = TokenType::ASTERISK; break;
+        case '/': tt = TokenType::SLASH; break;
+        case '>': tt = TokenType::GT; break;
+        case '<': tt = TokenType::LT; break;
         case ',': tt = TokenType::COMMA; break;
         case ';': tt = TokenType::SEMICOLON; break;
         case '(': tt = TokenType::LPAREN; break;
