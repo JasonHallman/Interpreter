@@ -17,8 +17,9 @@ Token Lexer::nextToken() {
     switch (cur_char) {
         case '=':
             if (this->getChar(1) == '=') {
-                tt = TokenType::EQ;
-                this->pos++;
+                std::string literal = this->input.substr(this->pos, 2);
+                this->pos += 2;
+                return Token(TokenType::EQ, literal);
             } else {
                 tt = TokenType::ASSIGN;
             } 
@@ -27,8 +28,9 @@ Token Lexer::nextToken() {
         case '-': tt = TokenType::MINUS; break;
         case '!':
             if (this->getChar(1) == '=') {
-                tt = TokenType::NOT_EQ;
-                this->pos++;
+                std::string literal = this->input.substr(this->pos, 2);
+                this->pos += 2;
+                return Token(TokenType::NOT_EQ, literal);
             } else {
                 tt = TokenType::BANG;
             }
