@@ -16,5 +16,11 @@ add_executable(interpreter
 	src/lexer.cpp
 )
 
+add_executable(repl
+	src/repl.cpp
+	src/token.cpp
+	src/lexer.cpp
+)
+
 # Add the tests
 add_subdirectory(tests)
